@@ -3,7 +3,7 @@ Routes = ->
   @route 'logout'
 
   @resource(
-    'customer'
+    'customers'
     { path: '/' }
     () ->
       @resource(
