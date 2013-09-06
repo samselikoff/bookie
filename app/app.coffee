@@ -12,7 +12,4 @@ App.Router.map(
   routes
 )
 
-`import store from 'appkit/store'`
-App.Store = store
-
 `export default App`

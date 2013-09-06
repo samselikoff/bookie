@@ -40,7 +40,9 @@
     "karma-phantomjs-launcher": "~0.0.2",
     "lockfile": "~>0.3.0",
     "grunt-concat-sourcemap": "~0.3.0",
-    "grunt-contrib-coffee": "~0.7.0"
+    "grunt-contrib-coffee": "~0.7.0",
+    "express": "~3.3.8",
+    "underscore": "~1.5.1"
   },
   "dependencies": {
     "loom": "~2.0.0",
