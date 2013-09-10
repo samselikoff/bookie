@@ -1,0 +1,87 @@
+/* Colors 
+******************/
+$primary: #3E606F;
+$secondary: #154153;
+$highlight: #91AA9D;
+
+
+/* Bootstrap overrides
+***********************/
+a {color: $primary;}
+a:hover, a:focus {color: darken($primary, 10%);}
+
+
+/* Main layout
+**********************/
+html, body {
+  height: 100%;
+}
+body {
+  background-color: rgb(221, 228, 234);
+}
+
+#left-panel {
+  float: left;
+  width: 220px;
+
+  .title {
+    color: $secondary;
+    padding-left: 10px;
+    text-shadow: rgba(255, 255, 255, 0.498039) 0px 1px 0px;
+  }
+
+  nav {
+    margin-top: 120px;
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+
+      li:last-child {border-bottom: 1px solid #ccc;}
+      li {
+        border-top: 1px solid #ccc;
+
+        a.active {
+          background-color: lighten($primary, 15%);
+          color: white;
+        }
+        a {
+          display: block;
+          padding: 10px;
+
+          &:hover {
+            text-decoration: none;
+            background-color: lighten($primary, 10%);
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+#center-panel {
+  margin-left: 220px;
+  background-color: white;
+  border-left: 1px solid #ddd;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  min-height: 100%;
+  padding: 20px;
+}
+
+
+/* Page styles
+*************************/
+#customers {
+  table {
+    margin-top: 160px;
+
+    tr {
+      cursor: pointer;
+    }
+
+  }
+}

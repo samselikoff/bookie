@@ -1,6 +1,7 @@
 CustomerRoute = Ember.Route.extend(
-	model: () ->
-		return {}	
+  # setupController: (controller, model) ->
+  #   controller.set('model', model)
+  #   @controllerFor('')
 )
 
 `export default CustomerRoute`

@@ -42,7 +42,8 @@
     "grunt-concat-sourcemap": "~0.3.0",
     "grunt-contrib-coffee": "~0.7.0",
     "express": "~3.3.8",
-    "underscore": "~1.5.1"
+    "underscore": "~1.5.1",
+    "grunt-sass": "~0.6.1"
   },
   "dependencies": {
     "loom": "~2.0.0",

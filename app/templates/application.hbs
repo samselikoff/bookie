@@ -1,2 +1,17 @@
+<div id="left-panel">
+  <h1 class="title">Bookie</h1>
+  <div class="loading">
+    {{ outlet loading }}
+  </div>
+	<nav>
+		<ul>
+			<li>{{#link-to 'customers'}}Customers{{/link-to}}</li>
+			<li>{{#link-to 'orders'}}Orders{{/link-to}}</li>
+			<li>{{#link-to 'sales'}}Sales{{/link-to}}</li>
+		</ul>
+	</nav>  
+</div>
 
-{{outlet}}
+<div id="center-panel">
+  {{outlet}}
+</div>
