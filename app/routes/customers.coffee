@@ -2,6 +2,10 @@
 
 CustomersRoute = Ember.Route.extend
   model: ->
-    debugger
+    this.store.find('customer')
+
+  actions:
+    viewCustomer: (customer) ->
+      @transitionTo('customer', customer)
 
 `export default CustomersRoute`

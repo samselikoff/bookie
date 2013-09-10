@@ -5,15 +5,15 @@ Routes = ->
   @resource(
     'customers'
     { path: '/' }
+  )
+
+  @resource(
+    'customer'
+    { path: '/customer/:customer_id' }
     () ->
       @resource(
-        'customer'
-        { path: '/customers/:customer_id' }
-        () ->
-          @resource(
-            'order'
-            { path: '/:order_id' }
-          )
+        'order'
+        { path: '/:order_id' }
       )
   )
 
@@ -25,5 +25,7 @@ Routes = ->
         { path: '/:order_id' }
       )
   )
+
+  @route('sales')
 
 `export default Routes`

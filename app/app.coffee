@@ -12,4 +12,6 @@ App.Router.map(
   routes
 )
 
+App.ApplicationAdapter = DS.FixtureAdapter.extend();
+
 `export default App`
