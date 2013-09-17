@@ -28,7 +28,7 @@ module.exports = function(config) {
       'karma-phantomjs-launcher',
       'karma-chrome-launcher',
       'karma-firefox-launcher',
-      'karma-safari-launcher'
+      //'karma-safari-launcher'  // npm install karma-safari-launcher
     ],
 
     preprocessors: {
@@ -48,7 +48,7 @@ module.exports = function(config) {
     },
 
     // web server port
-    port: 9876,
+    port: parseInt(process.env.PORT, 10) + 1 || 9876,
 
     // cli runner port
     runnerPort: 9100,

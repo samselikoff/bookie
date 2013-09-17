@@ -1,3 +1,4 @@
+`import router from 'appkit/router'`
 `import Resolver from 'resolver'`
 
 App = Ember.Application.create
@@ -5,13 +6,9 @@ App = Ember.Application.create
   LOG_VIEW_LOOKUPS: true
   modulePrefix: 'appkit'
   Resolver: Resolver
+  Router: Ember.Router.extend
+    router: router
 
-`import routes from 'appkit/routes'`
-
-App.Router.map(
-  routes
-)
-
-App.ApplicationAdapter = DS.FixtureAdapter.extend();
+App.ApplicationAdapter = DS.FixtureAdapter.extend()
 
 `export default App`

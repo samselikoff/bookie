@@ -67,7 +67,7 @@ define("resolver",
   }
 
   var underscore = Ember.String.underscore;
-  var classify = Ember.String.classify;;
+  var classify = Ember.String.classify;
   var get = Ember.get;
 
   function parseName(fullName) {
@@ -94,11 +94,15 @@ define("resolver",
     var pluralizedType = parsedName.type + 's';
     var name = parsedName.fullNameWithoutType;
 
-    var moduleName = prefix + '/' +  pluralizedType + '/' + name.replace(/\./, '/');
+    var moduleName = prefix + '/' +  pluralizedType + '/' + name;
     var module;
 
     if (define.registry[moduleName]) {
       module = requireModule(moduleName);
+
+      if (module === undefined) {
+        throw new Error("Module: '" + name + "' was found but returned undefined. Did you forget to `export default`?");
+      }
 
       if (typeof module.create !== 'function') {
         module = classFactory(module);
@@ -124,7 +128,11 @@ define("resolver",
     resolveOther: resolveOther,
     parseName: parseName,
     normalize: function(fullName) {
-      return fullName;
+      // replace `.` with `/` in order to make nested controllers work in the following cases
+      // 1. `needs: ['posts/post']`
+      // 2. `{{render "posts/post"}}`
+      // 3. `this.render('posts/post')` from Route
+      return fullName.replace(/\./g, '/');
     }
   });
 
