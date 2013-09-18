@@ -5,7 +5,8 @@
 			"first_name": "Jelani",
 			"last_name": "Clay",
 			"email": "justo.Proin.non@purusac.edu",
-			"phone": "1-285-748-9925"
+			"phone": "1-285-748-9925",
+			"orders": ["1", "2", "3"]
 		},
 		{
 			"id": "2",

@@ -6,6 +6,7 @@ Customer = DS.Model.extend
   email: DS.attr(type: 'string')
   phone: DS.attr(type: 'string')
   orders: DS.hasMany('order', {async: true}) # the async option forced the fixture orders data to load when I visisted /customers/1
+  # orders: DS.hasMany('order') # once node api is working
 
 Customer.FIXTURES = [
     {

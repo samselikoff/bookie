@@ -12,6 +12,12 @@ App.Router.map(
   routes
 )
 
+# Once node server api is working
+# App.ApplicationAdapter = DS.RESTAdapter.extend(
+#   host: 'http://localhost:9999'
+#   namespace: '_api'
+# )
+
 App.ApplicationAdapter = DS.FixtureAdapter.extend();
 
 `export default App`
