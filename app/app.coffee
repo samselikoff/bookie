@@ -1,3 +1,4 @@
+`import router from 'appkit/router'`
 `import Resolver from 'resolver'`
 
 App = Ember.Application.create
@@ -5,19 +6,9 @@ App = Ember.Application.create
   LOG_VIEW_LOOKUPS: true
   modulePrefix: 'appkit'
   Resolver: Resolver
+  Router: Ember.Router.extend
+    router: router
 
-`import routes from 'appkit/routes'`
-
-App.Router.map(
-  routes
-)
-
-# Once node server api is working
-# App.ApplicationAdapter = DS.RESTAdapter.extend(
-#   host: 'http://localhost:9999'
-#   namespace: '_api'
-# )
-
-App.ApplicationAdapter = DS.FixtureAdapter.extend();
+App.ApplicationAdapter = DS.FixtureAdapter.extend()
 
 `export default App`

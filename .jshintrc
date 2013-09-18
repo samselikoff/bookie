@@ -7,6 +7,8 @@
     "Ember",
     "DS",
     "$",
+    "Em",
+    "QUnit",
     "define",
     "console",
     "require",

@@ -1,4 +1,4 @@
-Routes = ->
+router = Ember.Router.map(->
   @route 'login'
   @route 'logout'
 
@@ -27,5 +27,6 @@ Routes = ->
   )
 
   @route('sales')
+)
 
-`export default Routes`
+`export default router`
